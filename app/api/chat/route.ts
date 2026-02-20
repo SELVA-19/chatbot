@@ -28,8 +28,8 @@ export async function POST(req: Request) {
     messages: await convertToModelMessages(messages),
 
     //TODO TASK 2 - Tool Calling
-    // tools,            // Uncomment to enable tool calling
-    // maxSteps: 5,      // Allow multi-step tool use (model calls tool → gets result → responds)
+    tools,            // Uncomment to enable tool calling
+    //maxSteps: 5,      // Allow multi-step tool use (model calls tool → gets result → responds)
   });
 
   return result.toUIMessageStreamResponse();
